@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Launch Mobility</title>
+  <h1>UrbanPilot</h1>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+  <h2>Profile</h2>
+  <label>First Name: </label>
+  {% if user.first_name %}
+    {{user.first_name}}
+  {% else %}
+    n/a
+  {% endif %} <br>
+
+  <label>Middle Name: </label>
+  {% if user.middle_name %}
+    {{user.middle_name}}
+  {% else %}
+    n/a
+  {% endif %} <br>
+
+  <label>Last Name: </label>
+  {% if user.last_name %}
+    {{user.last_name}}
+  {% else %}
+    n/a
+  {% endif %} <br>
+
+  <label>Email: </label>
+  {% if user.email %}
+    {{user.email}}
+  {% else %}
+    n/a
+  {% endif %} <br>
+
+  <label>Zip-Code: </label>
+  {% if user.zip_code %}
+    {{user.zip_code}}
+  {% else %}
+    n/a
+  {% endif %} <br>
+
+  <br>
+  <br>
+  <a href="/profile_edit/{{user.email}}">Edit Profile</a>
+  <a href="/logout">logout</a>
+</body>
+</html>

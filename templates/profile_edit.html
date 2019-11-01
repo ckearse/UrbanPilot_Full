@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Launch Mobility</title>
+  <h1>UrbanPilot</h1>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h2>Edit Profile</h2>
+    <form action="/profile_edit/{{user.email}}/update" method="POST">
+      <p>First Name: </p>
+      <input name="first_name" type="text" value="{{user.first_name}}">
+    
+      <p>Middle Name: </p>
+      <input name="middle_name" type="text" value="{{user.middle_name}}">
+    
+      <p>Last Name: </p>
+      <input name="last_name" type=text value="{{user.last_name}}">
+    
+      <p>Email: </p>
+      <input name="email" type="email" value="{{user.email}}">
+    
+      <p>Zip-Code: </p>
+      <input name="zip_code" type=number value="{{user.zip_code}}">
+
+      <button type="submit">Save</button>
+    </form>
+    
+    <a href="/profile/{{user.email}}">Cancel</a>
+    <a href="/logout">logout</a>
+</body>
+</html>
